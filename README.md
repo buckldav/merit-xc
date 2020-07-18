@@ -12,12 +12,16 @@ Coach Buckley here. Cross country is both an individual and a team sport. You pr
 Through cross country, you have the chance to improve yourself physically, mentally, and emotionally every single day. It has been over ten years since I began seriously running, and I still enjoy getting out on Utah’s beautiful trails with friends and keeping myself fit because it improves my quality of life. “Runner’s high” is a real thing and it’s a great addiction.
 
 ### Google Calendar
-Embed this plz. You can see the iframe for this when you clone the repo and open this README.
+Embed this plz.<br>
+```html
 <iframe src="https://calendar.google.com/calendar/embed?src=c_9hu8sc4c1nlc77nokm4kviu6io%40group.calendar.google.com&ctz=America%2FDenver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+```
 
 ### Map of workouts
-Embed this too.
+Embed this too.<br>
+```html
 <iframe src="https://www.google.com/maps/d/embed?mid=1xbva_Q6kM1gt1N9NmcpCJK647ajTKubI" width="640" height="480"></iframe>
+```
 
 ## PAGE: How to Join
 
