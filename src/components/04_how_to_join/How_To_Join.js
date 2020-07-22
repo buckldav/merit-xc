@@ -24,9 +24,8 @@ function How_To_Join() {
         there are bathrooms and we will stretch before continuing the run. When
         school starts, we will practice after school (at the school). If you
         would like to carpool for summer practice but don’t know others who are
-        going, contact Coach Buckley at 801-473-5169 or
-        david.buckley@meritacademy.org and he can help connect you with someone
-        who lives near you.{" "}
+        going, contact Coach Buckley at david.buckley@meritacademy.org and he
+        can help connect you with someone who lives near you.{" "}
       </p>
 
       <h6>THE EXTRA MILE</h6>
@@ -54,7 +53,7 @@ function How_To_Join() {
         {" "}
         For more details, check out the full practice form&nbsp;
         <a
-          href="https://docs.google.com/document/d/1yER-D83RU8CpplRgf0whABhql8F3tE_fW1vXDt_UBOU/edit?usp=sharing."
+          href="https://docs.google.com/document/d/1yER-D83RU8CpplRgf0whABhql8F3tE_fW1vXDt_UBOU/edit?usp=sharing"
           target="_blank"
         >
           here!
@@ -76,7 +75,7 @@ function How_To_Join() {
           <ul id="unorderedList2">
             <li>
               Download physical form{" "}
-              <a href="https://www.uhsaa.org/forms/forma.pdf." target="_blank">
+              <a href="https://www.uhsaa.org/forms/forma.pdf" target="_blank">
                 here
               </a>
             </li>
