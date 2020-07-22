@@ -3,19 +3,73 @@
 }
 
 .App-header {
-  background-image: url(./components//background/HobbleCreekCanyon.jpg);
+  background-image: linear-gradient(
+      to right,
+      rgba(16, 37, 68, 0.85),
+      rgba(16, 37, 68, 1),
+      rgba(16, 37, 68, 1),
+      rgba(16, 37, 68, 1),
+      rgba(16, 37, 68, 0.85)
+    ),
+    url(./components/01_background/HobbleCreekCanyon.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 85%, cover;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.Main-page {
-  padding: 20px 0px;
-  background-color: #102544;
-  width: 1000px;
+#meritAcademyLogo {
+  height: 350px;
+  width: 350px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+#navigationBar {
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 0, 0, 0),
+    rgba(170, 29, 35, 1),
+    rgba(255, 0, 0, 0)
+  );
+  display: flex;
+  width: 75%;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 10px 0px;
+}
+
+@media (max-width: 1440px) {
+  #navigationBar {
+    flex-direction: column;
+    width: 75%;
+    margin: auto;
+  }
+}
+
+.navigations {
+  font-size: 24px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 20px;
+}
+
+.navigations:hover {
+  color: grey;
+}
+
+.navigations:active {
+  color: black;
+}
+
+#meritAcademyLogo2 {
+  height: 100px;
+  width: 100px;
+  padding-top: 50px;
+  padding-bottom: 20px;
 }
