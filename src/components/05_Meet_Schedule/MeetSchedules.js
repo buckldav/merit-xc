@@ -1,6 +1,6 @@
 import React from "react";
 
-function Meet_Schedules() {
+function MeetSchedules() {
   return (
     <div>
       <h4>Tentative Meet Schedule*</h4>
@@ -43,4 +43,4 @@ function Meet_Schedules() {
   );
 }
 
-export default Meet_Schedules;
+export default MeetSchedules;
