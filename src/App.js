@@ -5,8 +5,8 @@ import Logo from "./components/02_merit_logo/MeritKnightsLogo.jpg";
 import Logo2 from "./components/02_merit_logo/MeritLogo.jpg";
 
 import IntroductionToXC from "./components/03_home_page/IntroductionToXC";
-import How_To_Join from "./components/04_how_to_join/How_To_Join";
-import Meet_Schedules from "./components/05_Meet_Schedule/Meet_Schedules";
+import HowToJoin from "./components/04_how_to_join/HowToJoin";
+import MeetSchedules from "./components/05_Meet_Schedule/MeetSchedules";
 
 function App() {
   return (
@@ -49,19 +49,19 @@ function App() {
 }
 
 function Home() {
-  // return <How_To_Join />;
+  // return <HowToJoin />;
   return <IntroductionToXC />;
   // return <h2>Home</h2>;
 }
 
 function Join() {
   // return <h2>Join</h2>;
-  return <How_To_Join />;
+  return <HowToJoin />;
 }
 
 function Meetings() {
   // return <h2>Join</h2>;
-  return <Meet_Schedules />;
+  return <MeetSchedules />;
 }
 
 export default App;

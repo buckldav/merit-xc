@@ -1,7 +1,7 @@
 import React from "react";
-import "./How_To_Join.css";
+import "./HowToJoin.css";
 
-function How_To_Join() {
+function HowToJoin() {
   return (
     <div>
       <h4>How do you join Merit XC? Come to practice!</h4>
@@ -54,7 +54,7 @@ function How_To_Join() {
         For more details, check out the full practice form&nbsp;
         <a
           href="https://docs.google.com/document/d/1yER-D83RU8CpplRgf0whABhql8F3tE_fW1vXDt_UBOU/edit?usp=sharing"
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
         >
           here!
         </a>
@@ -75,7 +75,7 @@ function How_To_Join() {
           <ul id="unorderedList2">
             <li>
               Download physical form{" "}
-              <a href="https://www.uhsaa.org/forms/forma.pdf" target="_blank">
+              <a href="https://www.uhsaa.org/forms/forma.pdf" target="_blank" rel="noopener noreferrer">
                 here
               </a>
             </li>
@@ -83,7 +83,7 @@ function How_To_Join() {
         </li>
         <li>
           Registration on{" "}
-          <a href="https://registermyathlete.com/" target="_blank">
+          <a href="https://registermyathlete.com/" target="_blank" rel="noopener noreferrer">
             registermyathlete.com
           </a>
         </li>
@@ -92,4 +92,4 @@ function How_To_Join() {
   );
 }
 
-export default How_To_Join;
+export default HowToJoin;
