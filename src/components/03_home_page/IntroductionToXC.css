@@ -1,0 +1,23 @@
+.coachesStatement {
+  font-size: 20px;
+  text-indent: 60px;
+  text-align: left;
+  margin: 20px 21% 50px;
+}
+
+.Map-and-calendar {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: auto;
+  margin-top: 50px;
+}
+
+#map {
+  width: 800px;
+  height: 600px;
+}
+
+#calendar {
+  margin-top: 20px;
+}

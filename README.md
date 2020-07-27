@@ -1,44 +1,68 @@
-# Merit XC Site Specs
-Howdy partner, thanks for helping me out. Hopefully this is a good project for ya. I would like an outdoorsy theme (make it feel like you're in a forest, mountain, canyon or something). I would like there to be four pages: Home, How to Join, Meet Schedule, and a Contact Page (with just a contact form, it doesn't have to work yet, I'll configure it later to send stuff to my email). All the contact for those pages is below. If you can make it responsive (work on mobile and desktop), that would be nice. Can we get it done by Thursday the 23rd? Let me know if you have any questions or if I can help you with anything along the way.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## PAGE: Home
+## Available Scripts
 
-### Welcome Text
-<i>NOTE: I'll probably change this later, you can just copy and paste it in there for now.</i>&nbsp;📋
+In the project directory, you can run:
 
-WHY MERIT CROSS COUNTRY?
-Coach Buckley here. Cross country is both an individual and a team sport. You practice as a team, bond as a team, and race as a team in addition to trying to achieve your personal goals. There’s something about experiencing hard things with your peers that draws you closer together. Some of my greatest experiences in high school came through cross country and I can’t wait for you to form your own memories on this team. We are few, but we are one.
+### `npm start`
 
-Through cross country, you have the chance to improve yourself physically, mentally, and emotionally every single day. It has been over ten years since I began seriously running, and I still enjoy getting out on Utah’s beautiful trails with friends and keeping myself fit because it improves my quality of life. “Runner’s high” is a real thing and it’s a great addiction.
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### Google Calendar
-Embed this plz.<br>
-```html
-<iframe src="https://calendar.google.com/calendar/embed?src=c_9hu8sc4c1nlc77nokm4kviu6io%40group.calendar.google.com&ctz=America%2FDenver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-```
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-### Map of workouts
-Embed this too.<br>
-```html
-<iframe src="https://www.google.com/maps/d/embed?mid=1xbva_Q6kM1gt1N9NmcpCJK647ajTKubI" width="640" height="480"></iframe>
-```
+### `npm test`
 
-## PAGE: How to Join
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### Blurb for the noobs
-How do you join Merit XC? Come to practice! 
-** Include info on how to get to practice from [https://docs.google.com/document/d/1yER-D83RU8CpplRgf0whABhql8F3tE_fW1vXDt_UBOU/edit?usp=sharing](https://docs.google.com/document/d/1yER-D83RU8CpplRgf0whABhql8F3tE_fW1vXDt_UBOU/edit?usp=sharing). Include link to contact form.
+### `npm run build`
 
-### Action Items for Athletes
-<b>All of these items are required before students can race in the first meet of the year.</b>
-<i>NOTE: Actually make these good grammar</i>&nbsp;😅
-* Include a link to this physical form: [https://www.uhsaa.org/forms/forma.pdf](https://www.uhsaa.org/forms/forma.pdf). Say the physical is required and athletes must turn in the physical to the front office.
-* Pay $100 to Vivian in the finance office.
-* Register yourself on [https://registermyathlete.com/](https://registermyathlete.com/).
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## PAGE: Meet Schedule
-The meets are at the end of this document: [https://docs.google.com/document/d/1yER-D83RU8CpplRgf0whABhql8F3tE_fW1vXDt_UBOU/edit?usp=sharing](https://docs.google.com/document/d/1yER-D83RU8CpplRgf0whABhql8F3tE_fW1vXDt_UBOU/edit?usp=sharing). You can lift the info from the document and mark it up in HTML.
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
 
-## Pretty pictures
-Here's a link to pictures for the site. Put 'em wherever you feel like. Use all or none of them. Feel free to use other generic running clip art and such too.
-[https://drive.google.com/drive/folders/1E1b92vRe6QMLyCxCQSWxmzDNOzmkmd2I](https://drive.google.com/drive/folders/1E1b92vRe6QMLyCxCQSWxmzDNOzmkmd2I)
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+
+### Analyzing the Bundle Size
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+
+### Making a Progressive Web App
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `npm run build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
