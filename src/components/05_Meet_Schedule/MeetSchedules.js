@@ -2,8 +2,9 @@ import React from "react";
 
 function MeetSchedules() {
   return (
-    <div>
+    <article>
       <h4>Tentative Meet Schedule*</h4>
+
       <p>
         <i>
           * Once athletes have completed the “REQUIRED ACTIONS” (How to Join
@@ -39,7 +40,7 @@ function MeetSchedules() {
       <p>Location: Sugarhouse Park, Salt Lake City, UT. </p>
       <p>Date: October 21, 2020</p>
       <p>Start: various times per UHSAA website</p>
-    </div>
+    </article>
   );
 }
 

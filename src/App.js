@@ -1,8 +1,7 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Logo from "./components/02_merit_logo/MeritKnightsLogo.jpg";
-import Logo2 from "./components/02_merit_logo/MeritLogo.jpg";
+import Logo from "./media/knights-xc.PNG";
 
 import IntroductionToXC from "./components/03_home_page/IntroductionToXC";
 import HowToJoin from "./components/04_how_to_join/HowToJoin";
@@ -13,7 +12,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div className="Main-page">
-          <img src={Logo} alt="Logo" id="meritcademyLogo"></img>
+          <img src={Logo} alt="Logo" id="meritAcademyLogo" width="300px"></img>
           <Router>
             <div>
               <nav id="navigationBar">
@@ -23,7 +22,7 @@ function App() {
                 <Link to="/join" className="navigations">
                   How to Join
                 </Link>
-                <Link to="/meetings" className="navigations">
+                <Link to="/meets" className="navigations">
                   Meet Schedule &amp; Locations
                 </Link>
               </nav>
@@ -35,13 +34,13 @@ function App() {
                 <Route exact path="/join">
                   <Join />
                 </Route>
-                <Route exact path="/meetings">
+                <Route exact path="/meets">
                   <Meetings />
                 </Route>
               </Switch>
             </div>
           </Router>
-          <img src={Logo2} alt="Logo" id="meritAcademyLogo2"></img>
+          <footer>&copy; 2020 by <a href="https://github.com/Adomin8er">Adomin8er</a></footer>
         </div>
       </header>
     </div>
