@@ -1,45 +1,5 @@
-h6 {
-  margin: 40px 21% 40px;
-  text-align: left;
-}
-
-p {
-  font-size: 24px;
-  text-align: left;
-  margin: 0px 21%;
-}
-.coachesStatement {
-  font-size: 20px;
-  text-indent: 60px;
-  text-align: left;
-  margin: 15px 21% 15px;
-}
-
-.coachesStatement2 {
-  font-size: 30px;
-  text-align: left;
-  margin: 15px 21% 15px;
-}
-
-.actionItems {
-  margin-top: 100px;
-}
-
-a {
-  color: grey;
-}
-
-a:hover {
-  color: dimgrey;
-}
-
-a:active {
-  color: black;
-}
-
 ul {
   text-align: left;
-  margin: 0px 21%;
 }
 
 li {

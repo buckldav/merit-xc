@@ -1,3 +1,29 @@
+article {
+  padding: 0 16px;
+}
+
+h6 {
+  text-align: left;
+}
+
+p {
+  font-size: 20px;
+  text-indent: 40px;
+  text-align: left;
+}
+
+p.no-indent {
+  text-indent: unset;
+}
+
+a, footer {
+  color: #aaa;
+}
+
+a:hover, a:active {
+  color: #888;
+}
+
 .App {
   text-align: center;
 }
@@ -10,22 +36,37 @@
       rgba(16, 37, 68, 1),
       rgba(16, 37, 68, 1),
       rgba(16, 37, 68, 0.85)
-    ),
-    url(./components/01_background/HobbleCreekCanyon.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 85%, cover;
+    );
+  
   min-height: 100vh;
   display: flex;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
+@media screen and (min-width: 500px) {
+  article {
+    margin: 0 7.5%;
+  }
+
+  .App-header {
+    background-image: linear-gradient(
+      to right,
+      rgba(16, 37, 68, 0.85),
+      rgba(16, 37, 68, 1),
+      rgba(16, 37, 68, 1),
+      rgba(16, 37, 68, 1),
+      rgba(16, 37, 68, 0.85)
+    ),
+    url(./components/01_background/HobbleCreekCanyon.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 85%, cover;
+  }
+}
+
 #meritAcademyLogo {
-  height: 350px;
-  width: 350px;
-  padding-top: 20px;
-  padding-bottom: 10px;
+  margin: 50px 15px;
 }
 
 #navigationBar {
@@ -72,4 +113,10 @@
   width: 100px;
   padding-top: 50px;
   padding-bottom: 20px;
+}
+
+footer {
+  margin: 2rem 0 3rem;
+  font-size: 1rem;
+  text-align: center;
 }
