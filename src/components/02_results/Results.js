@@ -36,7 +36,7 @@ class Results extends React.Component {
 
     return (
       <article>
-        <h1>Results</h1>
+        <h4>Results</h4>
         <div className="table-container">
           <table>
             {this.state.results ? this.state.results.map((val, i) => (

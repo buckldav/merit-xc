@@ -1,10 +1,12 @@
 import React from "react";
+import './MeetSchedules.css';
 
 function MeetSchedules() {
   return (
     <article>
-      <h1>Meet Schedule</h1>
-      <iframe frameBorder="false" title="meet schedule" style={{margin: "0 8px", width: "calc(100% - 16px)", height: "70vh"}} src="https://docs.google.com/document/d/1WNexz0tnHv_Q4r3bL5Iuj6Z-XKOsWZHgj43_KWPz-SY/preview">Loading...</iframe>
+      <h4>Meet Schedule</h4>
+      <a href="https://docs.google.com/document/d/1WNexz0tnHv_Q4r3bL5Iuj6Z-XKOsWZHgj43_KWPz-SY/preview" rel="noopener noreferrer" target="_blank" className="new-window">Open in a new window (for printing)</a>
+      <iframe frameBorder="false" title="meet schedule" src="https://docs.google.com/document/d/1WNexz0tnHv_Q4r3bL5Iuj6Z-XKOsWZHgj43_KWPz-SY/preview">Loading...</iframe>
     </article>
   );
 }

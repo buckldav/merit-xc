@@ -1,0 +1,10 @@
+iframe {
+  margin: 0 8px; 
+  width: calc(100% - 16px);
+  height: 70vh;
+}
+a.new-window {
+  font-size: 0.75em;
+  margin-bottom: 10px;
+  display: inline-block;
+}
