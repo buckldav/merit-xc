@@ -6,6 +6,7 @@ import Logo from "./media/knights-xc.PNG";
 import IntroductionToXC from "./components/03_home_page/IntroductionToXC";
 import HowToJoin from "./components/04_how_to_join/HowToJoin";
 import MeetSchedules from "./components/05_Meet_Schedule/MeetSchedules";
+import Results from "./components/02_results/Results";
 
 function App() {
   return (
@@ -23,7 +24,10 @@ function App() {
                   How to Join
                 </Link>
                 <Link to="/meets" className="navigations">
-                  Meet Schedule &amp; Locations
+                  Meet Schedule
+                </Link>
+                <Link to="/results" className="navigations">
+                  Race Results
                 </Link>
               </nav>
 
@@ -36,6 +40,9 @@ function App() {
                 </Route>
                 <Route exact path="/meets">
                   <Meetings />
+                </Route>
+                <Route exact path="/results">
+                  <Results />
                 </Route>
               </Switch>
             </div>
