@@ -10,5 +10,5 @@ npm start
 
 Need to create a ```.env``` file at the root of the project with the following:
 ```
-REACT_APP_API_KEY=<api-key>
+REACT_APP_API_KEY=<api-key> # Google Sheets API Key (for reading race results)
 ```
