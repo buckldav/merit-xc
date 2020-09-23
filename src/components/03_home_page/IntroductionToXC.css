@@ -9,6 +9,10 @@
     margin-top: 0;
     width: calc(100% - 346px);
   }
+
+  .text-with-pic img {
+    margin-bottom: 1em;
+  }
 }
 
 

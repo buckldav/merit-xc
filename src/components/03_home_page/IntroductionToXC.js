@@ -7,6 +7,9 @@ import "./IntroductionToXC.css";
 function IntroductionToXC() {
   return (
     <>
+      <div className="map-and-calendar">
+        <Calendar />
+      </div>
       <article>
         <h4>Why Merit Cross Country?</h4>
         <h6>COACH BUCKLEY HERE:</h6>
@@ -24,7 +27,6 @@ function IntroductionToXC() {
         </div>
       </article>
       <div className="map-and-calendar">
-        <Calendar />
         <Map />
       </div>
     </>
