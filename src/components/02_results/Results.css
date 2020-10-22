@@ -4,16 +4,30 @@
 table {
   min-width: 800px;
   font-size: 0.75em;
+  position: relative;
+  background-color: rgb(16, 37, 68);
 }
 table>tr>*:first-child {
   text-align: left;
   width: fit-content;
   overflow: hidden;
   white-space: nowrap;
+  position: sticky;
+  left: 0;
+  background-color: rgb(16, 37, 68);
 }
 th, td {
   padding-left: 4px;
   padding-right: 4px;
+  min-width: 100px;
+}
+@media screen and (min-width: 500px) {
+  th, td {
+    min-width: 150px;
+  }
+}
+.gg {
+  min-width: 0;
 }
 td.pr {
   background-image: linear-gradient(

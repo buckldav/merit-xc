@@ -23,6 +23,9 @@ class Results extends React.Component {
                 min = { time: data, i }
               }
             }
+            if (i === 1 || i === 2) {
+              row[i] = { "gg": data }
+            }
             if (i === row.length - 1 && min.i > -1) {
               row[min.i] = {"time": min.time, "pr": true}
             }
@@ -41,8 +44,8 @@ class Results extends React.Component {
           <table>
             {this.state.results ? this.state.results.map((val, i) => (
               <tr>{i === 0 ? 
-                val.map(val => <th>{val !== "Gender" && val !== "Grade" ? val : null}</th>) : 
-                val.map(val => val.pr ? <td className="pr">{val.time}</td> : <td>{val}</td>)}
+                val.map(val => val.gg ? <th className="gg"></th> : <th>{val}</th>) : 
+                val.map(val => val.gg ? <td className="gg">{val.gg}</td> : val.pr ? <td className="pr">{val.time}</td> : <td>{val}</td>)}
               </tr>
             )) : <p>Loading...</p>}
           </table>
