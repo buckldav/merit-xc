@@ -11,6 +11,9 @@ function IntroductionToXC() {
         <Calendar />
       </div>
       <article>
+        <h5>
+          New to running? Check out <a href="https://www.runnersworld.com/beginner/g34990360/beginner-running-tips/" target="_blank" rel="noopener noreferrer">this great article from Runner's World</a> about what to expect!
+        </h5>
         <h4>Why Merit Cross Country?</h4>
         <h6>COACH BUCKLEY HERE:</h6>
         <div className="text-with-pic">
