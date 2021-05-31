@@ -9,7 +9,7 @@ function HowToJoin() {
       <h6>SUMMER PRACTICE AND EXPECTATIONS</h6>
       <p>
         The first meet of the year is just after school starts (see <a href="/meets">meet schedule</a>). To ensure that we are fit and ready for that first race, we
-        will hold summer practice beginning <strong>Wednesday July 29th</strong>, continuing
+        will hold summer practice beginning <strong>Tuesday, July 6th</strong>, continuing
         Monday through Friday at <strong>7:45 am</strong>. We will meet at <strong><a href="/#map">Hobble Creek Park</a></strong> in
         Springville and enjoy the great trails and paths from there. Bring a
         water bottle because the drinking fountains are off.

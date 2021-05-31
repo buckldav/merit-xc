@@ -47,7 +47,7 @@ function App() {
               </Switch>
             </div>
           </Router>
-          <footer>&copy; 2020 by <a href="https://github.com/Adomin8er">Adomin8er</a></footer>
+          <footer>&copy; 2021 by <a href="https://github.com/Adomin8er">Adomin8er</a></footer>
         </div>
       </header>
     </div>
