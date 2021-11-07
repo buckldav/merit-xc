@@ -15,5 +15,5 @@ module.exports = withPWA({
     register: true,
   },
   reactStrictMode: true,
-  target: "experimental-serverless-trace",
+  target: "serverless",
 });
