@@ -20,7 +20,7 @@ const Page404 = () => {
         <Box textAlign="center" marginTop={4}>
           <Link href="/" passHref>
             <Button
-              backgroundColor={colorMode === "light" ? "gray.300" : "teal.500"}
+              backgroundColor={colorMode === "light" ? "gray.300" : "blue.600"}
             >
               Let&apos;s Head Back
             </Button>

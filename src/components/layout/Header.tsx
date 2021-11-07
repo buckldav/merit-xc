@@ -1,5 +1,6 @@
 import { Box, Flex, Heading, useColorModeValue } from "@chakra-ui/react";
 import Link from "next/link";
+import { RiExternalLinkLine } from "react-icons/ri";
 
 import ThemeToggle from "./ThemeToggle";
 
@@ -16,17 +17,22 @@ const Header = () => {
         </Box>
       </Flex>
       <Flex as="nav" width="full" align="center" mt="2">
-        <Box pr="2" color={useColorModeValue("brand.600", "brand.200")}>
+        <Box pr="3" color={useColorModeValue("brand.600", "brand.200")}>
           <Link href="/">Home</Link>
         </Box>
-        <Box pr="2" color={useColorModeValue("brand.600", "brand.200")}>
+        <Box pr="3" color={useColorModeValue("brand.600", "brand.200")}>
           <Link href="/workouts">Workouts</Link>
         </Box>
-        <Box pr="2" color={useColorModeValue("brand.600", "brand.200")}>
+        <Box pr="3" color={useColorModeValue("brand.600", "brand.200")}>
           <Link href="/results">Results</Link>
         </Box>
-        <Box pr="2" color={useColorModeValue("brand.600", "brand.200")}>
-          <a href="https://band.us/band/85784568">BAND</a>
+        <Box pr="3" color={useColorModeValue("brand.600", "brand.200")}>
+          <a href="https://band.us/band/85784568">
+            BAND{" "}
+            <RiExternalLinkLine
+              style={{ display: "inline-block", marginBottom: "3px" }}
+            />
+          </a>
         </Box>
       </Flex>
     </>
