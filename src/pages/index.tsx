@@ -1,17 +1,15 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Heading, Text } from "@chakra-ui/react";
 
-import CTASection from "components/CTASection";
-import SomeImage from "components/SomeImage";
-import SomeText from "components/SomeText";
+import ContactForm from "components/ContactForm";
+import Home from "components/Home";
 
-const Home = () => {
+const HomePage = () => {
   return (
     <Box mb={8} w="full">
-      <SomeText />
-      <SomeImage />
-      <CTASection />
+      <Home />
+      <ContactForm />
     </Box>
   );
 };
 
-export default Home;
+export default HomePage;
