@@ -8,6 +8,8 @@ import {
   Alert,
   AlertIcon,
   Heading,
+  Box,
+  useColorModeValue,
 } from "@chakra-ui/react";
 
 export default function ContactForm() {
@@ -23,6 +25,11 @@ export default function ContactForm() {
       <Heading as="h2" size="md" mt="5">
         Contact Coach Buckley
       </Heading>
+      <Box color={useColorModeValue("brand.600", "brand.200")}>
+        <a href="mailto:david.buckley@meritacademy.org">
+          david.buckley@meritacademy.org
+        </a>
+      </Box>
       {success ? (
         <Alert status="success" mt="2">
           <AlertIcon />
