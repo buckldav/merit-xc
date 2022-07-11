@@ -1,4 +1,11 @@
-import { Heading, Text, Flex, Box, useColorModeValue } from "@chakra-ui/react";
+import {
+  Heading,
+  Text,
+  Flex,
+  Box,
+  Button,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import MotionBox from "./motion/Box";
 import Image from "next/image";
 import Link from "next/link";
@@ -19,6 +26,7 @@ export default function Home() {
           alt="Merit Academy Cross Country Team 2021"
         />
       </MotionBox>
+
       <Text>
         The Merit Academy Cross Country team is based out of Springville, UT.
         Summer practices are Monday through Friday at 7:45 am; check the{" "}
@@ -27,6 +35,21 @@ export default function Home() {
         </Box>{" "}
         page for location and other details. Grades 7-12 are welcome to join!
       </Text>
+      <Heading as="h2" size="md" textAlign="left" my={3} width="100%">
+        Team Swag Store
+      </Heading>
+      <Text>
+        The first order of team gear is open until July 31st. Coach Buckley
+        wants to make sure that everyone has the opportunity to at least get a
+        shirt who wants one, so if you need any help, reach out to him.
+      </Text>
+      <Box textAlign="center" marginTop={3}>
+        <Link href="https://stores.inksoft.com/WS70777/shop/home" passHref>
+          <Button backgroundColor={useColorModeValue("gray.300", "blue.600")}>
+            Browse Team Gear
+          </Button>
+        </Link>
+      </Box>
     </Flex>
   );
 }
