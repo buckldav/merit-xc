@@ -6,8 +6,6 @@ import styles from "../styles/results.module.css";
 import { Result, ResultsProps, Filter } from "../types/results";
 import { Select } from "@chakra-ui/select";
 import { Flex } from "@chakra-ui/react";
-import { FaChevronDown } from "react-icons/fa";
-import queryString from "query-string";
 import { useRouter } from "next/dist/client/router";
 
 const SHEET = {
@@ -80,10 +78,7 @@ const Results = (props: ResultsProps) => {
 
   const onChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const newSheet = event.target.value;
-    const newQuery = queryString.stringify({
-      sheet: newSheet,
-    });
-    router.push("results?" + newQuery);
+    router.push("results", { query: { sheet: newSheet } });
     setYear(null);
     setGrade(null);
     setSheet(newSheet);
