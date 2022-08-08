@@ -3,16 +3,27 @@ import React, { useEffect, useState } from "react";
 import { Box, Heading } from "@chakra-ui/layout";
 import { useColorModeValue } from "@chakra-ui/color-mode";
 import styles from "../styles/results.module.css";
-import { Result, ResultsProps } from "../types/results";
+import { Result, ResultsProps, Filter } from "../types/results";
 import { Select } from "@chakra-ui/select";
+import { Flex } from "@chakra-ui/react";
+import { FaChevronDown } from "react-icons/fa";
+import queryString from "query-string";
+import { useRouter } from "next/dist/client/router";
 
 const SHEET = {
   ID: "1hLjYIGzbdt4j0PWATLJ3fKjzfErx4_yaDaHxqKxf8jw",
 };
 
 const DEFAULT_SHEET = "2021 5ks";
+const DEFAULT_FILTER = "all";
+
+function resultFilter(filter: Filter | null, row: Array<Result>) {
+  return filter ? row[filter.i].time.includes(filter.data) : true;
+}
 
 async function getSheetData(sheet: string, api_key: string | undefined) {
+  if (!sheet) return;
+
   const response = await fetch(
     `https://sheets.googleapis.com/v4/spreadsheets/${SHEET.ID}/values/${sheet}?key=${api_key}`
   );
@@ -48,27 +59,59 @@ async function getSheetData(sheet: string, api_key: string | undefined) {
   return results;
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps({ query }) {
+  const sheet = query.sheet || DEFAULT_SHEET;
   return {
     props: {
-      results: await getSheetData(DEFAULT_SHEET, process.env.API_KEY),
+      sheet,
+      results: await getSheetData(sheet, process.env.API_KEY),
       apiKey: process.env.API_KEY,
     },
   };
 }
 
 const Results = (props: ResultsProps) => {
-  const [results, setResults] = useState(Array<Array<Result>>());
-  const [sheet, setSheet] = useState(DEFAULT_SHEET);
+  const [results, setResults] = useState(props.results);
+  const [sheet, setSheet] = useState(props.sheet);
+  const [year, setYear] = useState<Filter | null>(null);
+  const [grade, setGrade] = useState<Filter | null>(null);
+
+  const router = useRouter();
 
   const onChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setSheet(event.target.value);
+    const newSheet = event.target.value;
+    const newQuery = queryString.stringify({
+      sheet: newSheet,
+    });
+    router.push("results?" + newQuery);
+    setYear(null);
+    setGrade(null);
+    setSheet(newSheet);
   };
 
-  useEffect(() => {
-    console.log(process.env.API_KEY);
-    setResults(props.results);
-  }, []);
+  const onYearChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    if (event.target.value === DEFAULT_FILTER) {
+      setYear(null);
+    } else {
+      const i = 4;
+      setYear({
+        i,
+        data: event.target.value,
+      });
+    }
+  };
+
+  const onGradeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    if (event.target.value === DEFAULT_FILTER) {
+      setGrade(null);
+    } else {
+      const i = 2;
+      setGrade({
+        i,
+        data: event.target.value,
+      });
+    }
+  };
 
   useEffect(() => {
     if (props.apiKey) {
@@ -113,8 +156,8 @@ const Results = (props: ResultsProps) => {
   };
 
   const getResultsTableBody = () =>
-    results.map((row, i) =>
-      i > 0 ? (
+    results?.map((row, i) =>
+      i > 0 && resultFilter(year, row) && resultFilter(grade, row) ? (
         <>
           {row[1].gg === "F" && counterM !== 1 && counterF === 1 && (
             <Box as="tr" key={"space" + i}>
@@ -122,45 +165,47 @@ const Results = (props: ResultsProps) => {
             </Box>
           )}
           <Box as="tr" key={i}>
-            {row.map((val, j) => (
-              <>
-                {val.gg ? (
-                  <td key={val.gg + j} className={styles.gg}>
-                    {val.gg}
-                  </td>
-                ) : val.pr ? (
-                  <Box
-                    as="td"
-                    key={val.time + j}
-                    color={
-                      row.length > 4 && !sheet.includes("Records")
-                        ? useColorModeValue("brand.600", "brand.200")
-                        : undefined
-                    }
-                    fontWeight="bold"
-                  >
-                    {val.time}
-                  </Box>
-                ) : (
-                  <Box
-                    as="td"
-                    key={val.time + j}
-                    bg={useColorModeValue("white", "blue.900")}
-                  >
-                    {j === 0 ? (
-                      <>
-                        <span className={styles.number}>
-                          {row[1].gg === "M" ? counterM++ : counterF++}.
-                        </span>{" "}
-                        {val.time}
-                      </>
-                    ) : (
-                      val.time
-                    )}
-                  </Box>
-                )}
-              </>
-            ))}
+            {row.map((val, j) => {
+              return (
+                <>
+                  {val.gg ? (
+                    <td key={val.gg + j} className={styles.gg}>
+                      {val.gg}
+                    </td>
+                  ) : val.pr ? (
+                    <Box
+                      as="td"
+                      key={val.time + j}
+                      color={
+                        row.length > 4 && !sheet?.includes("Records")
+                          ? useColorModeValue("brand.600", "brand.200")
+                          : undefined
+                      }
+                      fontWeight="bold"
+                    >
+                      {val.time}
+                    </Box>
+                  ) : (
+                    <Box
+                      as="td"
+                      key={val.time + j}
+                      bg={useColorModeValue("white", "blue.900")}
+                    >
+                      {j === 0 ? (
+                        <>
+                          <span className={styles.number}>
+                            {row[1].gg === "M" ? counterM++ : counterF++}.
+                          </span>{" "}
+                          {val.time}
+                        </>
+                      ) : (
+                        val.time
+                      )}
+                    </Box>
+                  )}
+                </>
+              );
+            })}
           </Box>
         </>
       ) : null
@@ -170,7 +215,7 @@ const Results = (props: ResultsProps) => {
     <article>
       <form>
         <Select
-          defaultValue={DEFAULT_SHEET}
+          defaultValue={props.sheet}
           onChange={onChange}
           mx="auto"
           mb="4"
@@ -191,6 +236,41 @@ const Results = (props: ResultsProps) => {
       <Heading as="h2" fontSize="lg" textAlign="center" mb="4">
         {sheet}
       </Heading>
+      <Flex alignItems="center" justifyContent="center" gridGap="3" mb="4">
+        <Heading size="sm">Filters</Heading>
+        {(sheet.includes("Records") || sheet.includes("TT")) && (
+          <Select
+            value={year ? year.data : DEFAULT_FILTER}
+            onChange={onYearChange}
+            maxWidth={120}
+            fontSize="sm"
+          >
+            <optgroup label="Year">
+              <option value={DEFAULT_FILTER}>All Years</option>
+              <option value="2022">2022</option>
+              <option value="2021">2021</option>
+              <option value="2020">2020</option>
+            </optgroup>
+          </Select>
+        )}
+        <Select
+          value={grade?.data || DEFAULT_FILTER}
+          onChange={onGradeChange}
+          maxWidth={120}
+          fontSize="sm"
+        >
+          <optgroup label="Grade">
+            <option value={DEFAULT_FILTER}>All Grades</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+          </optgroup>
+        </Select>
+      </Flex>
+
       <Box className={styles.results}>
         <table>
           <thead>{getResultsTableHead()}</thead>

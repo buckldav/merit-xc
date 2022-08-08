@@ -39,17 +39,16 @@ export default function Home() {
         Team Swag Store
       </Heading>
       <Text>
-        The first order of team gear is open until July 31st. Coach Buckley
-        wants to make sure that everyone has the opportunity to at least get a
-        shirt who wants one, so if you need any help, reach out to him.
+        The first order of team gear was open until July 31st and is now closed.
+        Coach Buckley will initiate a new order after school starts.
       </Text>
-      <Box textAlign="center" marginTop={3}>
+      {/* <Box textAlign="center" marginTop={3}>
         <Link href="https://stores.inksoft.com/WS70777/shop/home" passHref>
           <Button backgroundColor={useColorModeValue("gray.300", "blue.600")}>
             Browse Team Gear
           </Button>
         </Link>
-      </Box>
+      </Box> */}
     </Flex>
   );
 }
