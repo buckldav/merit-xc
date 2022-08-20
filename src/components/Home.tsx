@@ -29,7 +29,7 @@ export default function Home() {
 
       <Text>
         The Merit Academy Cross Country team is based out of Springville, UT.
-        Summer practices are Monday through Friday at 7:45 am; check the{" "}
+        Practices are Monday through Friday after school; check the{" "}
         <Box as="span" color={useColorModeValue("brand.600", "brand.200")}>
           <Link href="/workouts">workouts</Link>
         </Box>{" "}
@@ -39,16 +39,15 @@ export default function Home() {
         Team Swag Store
       </Heading>
       <Text>
-        The first order of team gear was open until July 31st and is now closed.
-        Coach Buckley will initiate a new order after school starts.
+        This final order of team gear will be open until September 5th.
       </Text>
-      {/* <Box textAlign="center" marginTop={3}>
+      <Box textAlign="center" marginTop={3}>
         <Link href="https://stores.inksoft.com/WS70777/shop/home" passHref>
           <Button backgroundColor={useColorModeValue("gray.300", "blue.600")}>
             Browse Team Gear
           </Button>
         </Link>
-      </Box> */}
+      </Box>
     </Flex>
   );
 }

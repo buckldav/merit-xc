@@ -12,7 +12,7 @@ const SHEET = {
   ID: "1hLjYIGzbdt4j0PWATLJ3fKjzfErx4_yaDaHxqKxf8jw",
 };
 
-const DEFAULT_SHEET = "2021 5ks";
+const DEFAULT_SHEET = "2022 5ks";
 const DEFAULT_FILTER = "all";
 
 function resultFilter(filter: Filter | null, row: Array<Result>) {
@@ -159,7 +159,7 @@ const Results = (props: ResultsProps) => {
               <td>&nbsp;</td>
             </Box>
           )}
-          <Box as="tr" key={i}>
+          <Box as="tr" key={JSON.stringify(row) + i}>
             {row.map((val, j) => {
               return (
                 <>
@@ -217,6 +217,7 @@ const Results = (props: ResultsProps) => {
           maxWidth={400}
         >
           <optgroup label="Race Results">
+            <option value="2022 5ks">2022 Results</option>
             <option value="2021 5ks">2021 Results</option>
             <option value="2021 Junior High">2021 Jr. High Results</option>
             <option value="2020 5ks">2020 Results</option>
