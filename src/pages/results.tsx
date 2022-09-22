@@ -218,6 +218,7 @@ const Results = (props: ResultsProps) => {
         >
           <optgroup label="Race Results">
             <option value="2022 5ks">2022 Results</option>
+            <option value="2022 Junior High">2022 Jr. High Results</option>
             <option value="2021 5ks">2021 Results</option>
             <option value="2021 Junior High">2021 Jr. High Results</option>
             <option value="2020 5ks">2020 Results</option>
