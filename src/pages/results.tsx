@@ -12,7 +12,7 @@ const SHEET = {
   ID: "1hLjYIGzbdt4j0PWATLJ3fKjzfErx4_yaDaHxqKxf8jw",
 };
 
-const DEFAULT_SHEET = "2022 5ks";
+const DEFAULT_SHEET = "2023 5ks";
 const DEFAULT_FILTER = "all";
 
 function resultFilter(filter: Filter | null, row: Array<Result>) {
@@ -217,6 +217,7 @@ const Results = (props: ResultsProps) => {
           maxWidth={400}
         >
           <optgroup label="Race Results">
+            <option value="2023 5ks">2023 Results</option>
             <option value="2022 5ks">2022 Results</option>
             <option value="2022 Junior High">2022 Jr. High Results</option>
             <option value="2021 5ks">2021 Results</option>
