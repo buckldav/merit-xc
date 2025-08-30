@@ -12,9 +12,9 @@ const SHEET = {
   ID: "1hLjYIGzbdt4j0PWATLJ3fKjzfErx4_yaDaHxqKxf8jw",
 };
 
-const DEFAULT_SHEET = "2024 5ks";
+const DEFAULT_SHEET = "2025 5ks";
 const DEFAULT_FILTER = "all";
-const CURRENT_YEAR = 2024;
+const CURRENT_YEAR = 2025;
 
 function resultFilter(filter: Filter | null, row: Array<Result>) {
   return filter ? row[filter.i].time.includes(filter.data) : true;
@@ -236,6 +236,7 @@ const Results = (props: ResultsProps) => {
           maxWidth={400}
         >
           <optgroup label="Race Results">
+            <option value="2025 5ks">2025 Results</option>
             <option value="2024 5ks">2024 Results</option>
             <option value="2024 Junior High">2024 Jr. High Results</option>
             <option value="2023 5ks">2023 Results</option>
@@ -267,6 +268,7 @@ const Results = (props: ResultsProps) => {
           >
             <optgroup label="Year">
               <option value={DEFAULT_FILTER}>All Years</option>
+              <option value="2025">2025</option>
               <option value="2024">2024</option>
               <option value="2023">2023</option>
               <option value="2022">2022</option>
