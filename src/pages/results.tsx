@@ -12,9 +12,9 @@ const SHEET = {
   ID: "1hLjYIGzbdt4j0PWATLJ3fKjzfErx4_yaDaHxqKxf8jw",
 };
 
-const DEFAULT_SHEET = "2025 5ks";
+const DEFAULT_SHEET = "2026 5ks";
 const DEFAULT_FILTER = "all";
-const CURRENT_YEAR = 2025;
+const CURRENT_YEAR = 2026;
 
 function resultFilter(filter: Filter | null, row: Array<Result>) {
   return filter ? row[filter.i].time.includes(filter.data) : true;
@@ -38,7 +38,7 @@ async function getSheetData(sheet: string, api_key: string | undefined) {
           0,
           ...min.time.split(":").map((val) => parseInt(val))
         ) >
-          new Date().setHours(0, ...data.split(":").map((val) => parseInt(val)))
+        new Date().setHours(0, ...data.split(":").map((val) => parseInt(val)))
       ) {
         min = { time: data, i };
       }
@@ -186,7 +186,7 @@ const Results = (props: ResultsProps) => {
                       key={val.time + j}
                       color={
                         (row.length > 4 && !sheet?.includes("Records")) ||
-                        isThisYearRecord
+                          isThisYearRecord
                           ? useColorModeValue("brand.600", "brand.200")
                           : undefined
                       }
@@ -236,6 +236,8 @@ const Results = (props: ResultsProps) => {
           maxWidth={400}
         >
           <optgroup label="Race Results">
+            <option value="2026 5ks">2026 Results</option>
+            <option value="2026 Junior High">2026 Jr. High Results</option>
             <option value="2025 5ks">2025 Results</option>
             <option value="2024 5ks">2024 Results</option>
             <option value="2024 Junior High">2024 Jr. High Results</option>
@@ -268,6 +270,7 @@ const Results = (props: ResultsProps) => {
           >
             <optgroup label="Year">
               <option value={DEFAULT_FILTER}>All Years</option>
+              <option value="2026">2026</option>
               <option value="2025">2025</option>
               <option value="2024">2024</option>
               <option value="2023">2023</option>

@@ -23,11 +23,11 @@ export default function ContactForm() {
   return (
     <>
       <Heading as="h2" size="md" mt="5">
-        Contact Coach Buckley
+        Contact Coach Williams
       </Heading>
       <Box color={useColorModeValue("brand.600", "brand.200")}>
-        <a href="mailto:david.buckley@meritacademy.org">
-          david.buckley@meritacademy.org
+        <a href="mailto:kathryn.williams@meritacademy.org">
+          kathryn.williams@meritacademy.org
         </a>
       </Box>
       {success ? (

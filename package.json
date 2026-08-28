@@ -16,6 +16,8 @@
   },
   "dependencies": {
     "@chakra-ui/react": "^1.6.12",
+    "@chakra-ui/styled-system": "^2.12.0",
+    "@chakra-ui/theme-tools": "^2.2.6",
     "@emotion/cache": "^11.5.0",
     "@emotion/react": "^11.5.0",
     "@emotion/server": "^11.4.0",
@@ -24,13 +26,13 @@
     "@netlify/plugin-nextjs": "^3.9.2",
     "framer-motion": "^4.1.17",
     "next": "^12.0.3",
-    "next-pwa": "^5.4.0",
     "next-seo": "^4.28.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1"
   },
   "devDependencies": {
+    "@types/node": "^24.13.0",
     "@types/react": "^17.0.34",
     "next-sitemap": "^1.6.203",
     "prettier": "^2.4.1",

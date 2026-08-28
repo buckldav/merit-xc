@@ -35,19 +35,6 @@ export default function Home() {
         </Box>{" "}
         page for location and other details. Grades 7-12 are welcome to join!
       </Text>
-      <Heading as="h2" size="md" textAlign="left" my={3} width="100%">
-        Team Swag Store
-      </Heading>
-      <Text>
-        This final order of team gear will be open until September 5th.
-      </Text>
-      <Box textAlign="center" marginTop={3}>
-        <Link href="https://stores.inksoft.com/WS70777/shop/home" passHref>
-          <Button backgroundColor={useColorModeValue("gray.300", "blue.600")}>
-            Browse Team Gear
-          </Button>
-        </Link>
-      </Box>
     </Flex>
   );
 }
